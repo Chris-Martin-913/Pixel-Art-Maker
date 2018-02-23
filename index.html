@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class>Lab: Pixel Art Maker</h1>
+    <h2>Choose Grid Size</h2>
+    <form class = "padding_5" id="sizePicker">
+        Grid Height:
+        <input type="number" id="input_height" name="height" min="5" max="100" placeholder="5 to 100" value = 10>
+        Grid Width:
+        <input type="number" id="input_width" name="width" min="5" max="100" placeholder="5 to 100" value = 10>
+        <input class = "cursor hide_menu" type="submit" id="submit">
+    <div id="quick_size">
+        Quick Grid Size:
+        <input class = "cursor" type = "radio" name="quick_size" value = "10" checked>10x10
+        <input class = "cursor" type = "radio" name="quick_size" value = "20">20x20
+        <input class = "cursor" type = "radio" name="quick_size" value = "30">30x30
+        <input class = "cursor" type = "radio" name="quick_size" value = "40">40x40
+        <input class = "cursor" type = "radio" name="quick_size" value = "50">50x50
+        
+    </div>
+    
+    </form>
+
+    <h2 class = "hide_menu hide_headings">Select Colors</h2>
+    <form id="setColors" class="hide_tools">
+        Left Mouse Button:
+        <input class = "cursor" type="color" id="colorPicker1">
+        Right Mouse Button:
+        <input class = "cursor" type="color" id="colorPicker2" value = "#FF0000">
+        Set Background Color:
+        <input class = "cursor" type="color" id="bgColorSelector" value= "#FFFFFF">
+    </form>
+    
+    <h2 class = "hide_menu hide_headings">Toolbox</h2>
+    
+    <form  id="toolBox" class="padding_5 hide_tools">
+        
+        Zoom:
+            <input class="zoomInOut cursor" type="range" min="1" max="20" value="10" class="slider cursor" id="zoom">
+            <span class="zoomInOut  cursor" id="zValue">100</span>
+            <span class="zoomInOut  cursor"> % </span>
+        Eraser:
+            <input class = "cursor" type="button" id="eraser" value = " Off ">
+        Hide Grid:
+            <input class = "cursor" type="button" id="hide_grid" value= "  #  ">
+      
+    
+    </form>
+    
+    <h2 class = "hide_menu hide_heading">Design Canvas</h2>
+    
+    <table id="pixel_canvas" class = "canvas padding_5"><span class="menu_type"></span></table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="designs.js"></script>
+</body>
+</html>
+</div>
